@@ -26,7 +26,7 @@ public class DataConsuerExampleApplication implements CommandLineRunner {
         for (DataConsumer dataConsumer : dataConsumers) {
             // 因為這邊是blocking
             // 所以沒有辦法一次讓所有的bean都執行
-            dataConsumer.consume();
+            new Thread(dataConsumer).start();
         }
     }
 }

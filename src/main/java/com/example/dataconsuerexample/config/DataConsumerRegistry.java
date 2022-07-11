@@ -23,7 +23,6 @@ public class DataConsumerRegistry {
     public List<DataConsumer> initDataConsumers() {
         List<DataConsumer> dataConsumers = new ArrayList<>(dataConsumerNum);
         for (int i = 1; i <= dataConsumerNum; ++i) {
-            System.out.println(i);
             dataConsumers.add(new DataConsumer(i, dataStorage));
         }
         return dataConsumers;
